@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_corners_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:contentDescription="@null"
+            android:src="@drawable/exclamation" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Security Alert!"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/msg_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/gray" />
+
+    <Button
+        android:id="@+id/ok_btn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="#00000000"
+        android:text="OK"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="20sp" />
+
+</LinearLayout>
+

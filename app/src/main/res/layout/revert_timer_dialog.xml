@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Action 1"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/five_m_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="5M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/fifteen_m_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="15M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/thirty_m_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="30M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/sixty_m_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="60M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/nr_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="NR"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Action 2"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/five_m_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="5M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/fifteen_m_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="15M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+                android:id="@+id/thirty_m_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="30M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/sixty_m_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="60M"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/nr_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="NR"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/colorPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditPIRActivity">
+
+    <include
+        android:id="@id/toolbar"
+        layout="@layout/toolbar2" />
+
+    <ScrollView
+        android:id="@+id/scv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/main_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/header_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="?attr/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/cancel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:onClick="pirEditClick"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Edit Timer"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/save_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="pirEditClick"
+                    android:paddingRight="10dp"
+                    android:text="Save"
+
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/header_rl"
+                android:background="@color/cyan2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/v"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/set_time_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:text="Set Time"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <NumberPicker
+                        android:id="@+id/np_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <NumberPicker
+                        android:id="@+id/np_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vt"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:id="@+id/label_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="8dp"
+                        android:text="Label"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pir_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textColorHint="?attr/colorPrimaryDark"
+                        android:backgroundTint="#00000000"
+                        android:hint="Scene Name"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/appliances_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/double_arrow"
+                    android:onClick="pirEditClick"
+                    android:padding="8dp"
+                    android:text="Appliances"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/v5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

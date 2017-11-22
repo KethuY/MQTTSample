@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_otp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OTPActivity">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_reg_trademark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/llMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91 "
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@null"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/cyan2" />
+
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:text="@string/link"
+                android:autoLink="map"/>
+
+            <Button
+                android:id="@+id/btnSubmitMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selection_btn_bg"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <EditText
+                android:id="@+id/etOTP"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:maxLength="6"
+                android:layout_toLeftOf="@+id/btnSubmitOTP"
+                android:background="@null"
+                android:hint="Enter Verification Code"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/cyan2" />
+
+            <Button
+                android:id="@+id/btnSubmitOTP"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selection_btn_bg"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textColor="@color/bg_white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="Didn't get a verification code?"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvResend"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/selection_btn_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="Resend"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <!--<View
+        android:id="@+id/firstLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_white" />-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@android:color/transparent"
+        card_view:cardBackgroundColor="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/llRooms"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="?attr/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/tvRoomName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical"
+                android:text="Room Name"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvEditRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tvDeleteRoom"
+                android:textSize="23sp"
+                android:textColor="@color/green"
+                android:layout_marginRight="20dp"
+                android:text="J"/>
+            <TextView
+                android:id="@+id/tvDeleteRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="23sp"
+                android:textColor="@color/red"
+                android:layout_marginRight="5dp"
+                android:text="r"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

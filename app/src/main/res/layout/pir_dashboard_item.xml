@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/delete_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="r"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/llPIR"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/pir_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="PIR Name"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="15sp" />
+
+            <ToggleButton
+                android:id="@+id/on_off_pir_switch"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textOff=""
+                android:textOn=""
+                android:background="@drawable/toggle_button_background"/>
+
+        </RelativeLayout>
+
+</LinearLayout>

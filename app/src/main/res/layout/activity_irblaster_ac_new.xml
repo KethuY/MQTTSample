@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".irblasters.IRBlasterAcNewActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/dvd_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            android:text="AIR CONDITIONER"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/white" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp"
+            android:weightSum="6">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/power_ac_on_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onACClick"
+                    android:text="r"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray_ir"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="On"
+                    android:textColor="@color/gray_ir"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/power_ac_off_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onACClick"
+                    android:text="r"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray_ir"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="Off"
+                    android:textColor="@color/gray_ir"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvACAppliance"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onACClick"
+                    android:text="g"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="35sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="Power"
+                    android:textColor="@color/gray_ir"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/model_ac_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onACClick"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/f2_ac_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onACClick"
+                    android:text="F2"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/arrow_ac_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onACClick"
+                    android:text="Q"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/degree_ac_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onACClick"
+                    android:text="16 C"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Mode"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/cool_ac_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onACClick"
+                        android:text="2"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Cool"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/hot_ac_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onACClick"
+                        android:text="3"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Hot"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/dry_ac_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onACClick"
+                        android:text="Y"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Dry"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/fan_ac_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onACClick"
+                        android:text="Z"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Fan"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Fan Speed"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/level_1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:onClick="onACClick"
+                        android:text="1"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/level_2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:onClick="onACClick"
+                        android:text="2"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/level_3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:onClick="onACClick"
+                        android:text="3"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/level_auto"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/oc_appliance_count_bg_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onACClick"
+                        android:text="Auto"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/swing_up_down_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white"
+                android:onClick="onACClick1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/swing_up_ac_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_horizontal"
+                    android:text="g"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="SWING"
+                    android:id="@+id/swing_name_ac"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/swing_down_ac_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="h"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/swing_left_right_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="onACClick1"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/swing_left_ac_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="SWING"
+                    android:id="@+id/swing_name_2_ac"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/swing_right_ac_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
+                    android:text="X"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white1"
+                android:gravity="center"
+                android:onClick="onACClick"
+                android:text="-"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white"
+                android:gravity="center"
+                android:text="TEMP"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white1"
+                android:gravity="center"
+                android:onClick="onACClick"
+                android:text="+"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/round_corners"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/temp_minus_ac_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="onACClick1"
+                    android:text="m"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="TEMP"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/temp_plus_ac_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="onACClick1"
+                    android:text="H"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvLearn"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/ir_learn_btn_rectangle"
+                android:gravity="center"
+                android:onClick="onACClick1"
+                android:text="Learn"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvImportSync"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/ir_learn_btn_rectangle"
+                android:gravity="center"
+                android:onClick="onACClick1"
+                android:text="Import"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">OneControlMQTTV3</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="action_themes">Themes</string>
+    <string name="action_energy_monitoring">Energy Monitoring</string>
+    <string name="action_sub_user">Sub-Users</string>
+    <string name="onecontrol">ONECONTROL</string>
+    <string name="link">By registering, you agree to our <a href="Terms &amp; Conditions"></a></string>
+
+    <!--Bottom Navigation Res-->
+    <string name="title_appliance">Appliance</string>
+    <string name="title_safety">Safety</string>
+    <string name="title_survey">Survelliance</string>
+    <string name="title_scenes">Scenes</string>
+    <string name="title_timer">Timer</string>
+    <string name="title_settings">Settings</string>
+    <string name="theme_3">Theme 3</string>
+    <string name="theme_2">Theme 2</string>
+    <string name="theme_1">Theme 1</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!--Left Navigation drawer Res-->
+    <string name="navigation_drawer_open">OneControl</string>
+    <string name="navigation_drawer_close">OneControl</string>
+
+    <!--Theme Selection Dialog Res-->
+    <string name="set">Set</string>
+    <string name="cancel">Cancel</string>
+
+
+    <!-- preferences -->
+    <string name="pref_dark_theme">pref_dark_theme</string> <!-- deprecated -->
+    <string name="pref_theme">pref_theme</string>
+    <string name="pref_theme_title">Theme</string>
+
+    <string name="pref_theme_value_red">red</string>
+    <string name="pref_theme_value_blue">blue</string>
+    <string name="pref_theme_value_yellow">yellow</string>
+    <string name="pref_theme_value_violet">violet</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="change_theme">Change Theme</string>
+
+    <!-- Theme -->
+    <string-array name="pref_theme_options">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Violet</item>
+    </string-array>
+    <string-array name="pref_theme_values">
+        <item>@string/pref_theme_value_red</item>
+        <item>@string/pref_theme_value_blue</item>
+        <item>@string/pref_theme_value_yellow</item>
+        <item>@string/pref_theme_value_violet</item>
+    </string-array>
+
+
+    <!--PIR timer_home picker data-->
+    <string-array name="array_pir_timer_hours">
+        <!-- <item>Select Hours</item>-->
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="array_pir_timer_minutes">
+        <!--<item>Select Minutes</item>-->
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+    </string-array>
+
+
+    <string-array name="ports">
+        <item>Select Port</item>
+        <item>Port 1</item>
+        <item>Port 2</item>
+        <item>Port 3</item>
+        <item>Port 4</item>
+        <item>Port 5</item>
+        <item>Port 6</item>
+        <item>Port 7</item>
+        <item>Port 8</item>
+    </string-array>
+
+    <string-array name="sensor_type">
+        <item>Select Sensor Type</item>
+        <item>Curtain</item>
+        <item>Gas</item>
+        <item>Glass Break</item>
+        <item>Magnetic</item>
+        <item>Panic</item>
+        <item>PIR</item>
+        <item>Smoke</item>
+        <item>Vibration</item>
+    </string-array>
+
+    <!--Spinners for appliances-->
+    <string-array name="array_appliance_6_types">
+        <item>Appliance Number</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="array_appliance_8_types">
+        <item>Appliance Number</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="array_appliance_typessymbols">
+        <item>Appliance Symbol</item>
+        <item>Fan</item>
+        <item>Light</item>
+        <item>TV</item>
+        <item>AC</item>
+        <item>Plug</item>
+        <item>LED</item>
+        <item>Washing-machine</item>
+        <item>MP</item>
+        <item>Geyser</item>
+        <item>DVD</item>
+        <item>Home Theater</item>
+        <item>Projector</item>
+        <item>Dummy</item>
+    </string-array>
+
+    <string-array name="array_appliance_fan_light">
+        <item>Appliance Symbol</item>
+        <item>Fan</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="array_appliance_dimmer">
+        <item>Appliance Dimmer</item>
+        <item>Dimmer</item>
+        <item>NA</item>
+    </string-array>
+
+
+</resources>

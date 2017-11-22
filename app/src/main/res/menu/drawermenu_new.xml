@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_item_home"
+            android:icon="@drawable/home_nav"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_item_account_details"
+            android:icon="@drawable/user_nav"
+            android:title="Account Details" />
+
+    </group>
+
+    <!--<item
+        android:title="Appliances">
+        <menu>
+            <group android:id="@+id/nav_item_lighting_head"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_item_ems"
+                    android:icon="@drawable/energy_mgmt_icon"
+                    android:title="Energy Monitoring" />
+            </group>
+        </menu>
+    </item>-->
+
+    <item android:title="Gateways">
+        <menu>
+            <group
+                android:id="@+id/nav_item_gateways_head"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_item_gateways"
+                    android:icon="@drawable/gateways_nav"
+                    android:title="Gateways" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Configuration">
+        <menu>
+            <group
+                android:id="@+id/nav_item_configuration_head"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_item_configuration"
+                    android:icon="@drawable/online_nav"
+                    android:title="Configure Wi-Fi" />
+                <item
+                    android:id="@+id/nav_item_unpair_wifi"
+                    android:icon="@drawable/offline_nav"
+                    android:title="Unpair Wi-Fi" />
+                <item
+                    android:id="@+id/nav_item_config_ir_remote"
+                    android:icon="@drawable/ir_nav"
+                    android:title="Configure IR Remote" />
+                <!--<item
+                    android:id="@+id/nav_item_subuser"
+                    android:icon="@drawable/ptz_icon"
+                    android:title="Sub-Users" />-->
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="About">
+        <menu>
+            <group
+                android:id="@+id/nav_item_about_head"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_item_feedback"
+                    android:icon="@drawable/feedback_nav"
+                    android:title="Feedback" />
+                <item
+                    android:id="@+id/nav_item_faq"
+                    android:icon="@drawable/faq_nav"
+                    android:title="FAQ's" />
+                <item
+                    android:id="@+id/nav_item_about_oc"
+                    android:icon="@drawable/about_nav"
+                    android:title="About OneControl" />
+                <!--<item
+                    android:id="@+id/nav_item_subuser"
+                    android:icon="@drawable/ptz_icon"
+                    android:title="Sub-Users" />-->
+            </group>
+        </menu>
+    </item>
+
+    <group
+        android:id="@+id/nav_item_version_head"
+        android:checkableBehavior="single">
+        <item android:title="                 Version 2.1.0" />
+
+    </group>
+
+    <!--<item android:title="Version 2.1.0">
+        <menu>
+            <group
+                android:id="@+id/nav_item_version_head"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_item_version"
+                    android:title="" />
+                &lt;!&ndash;<item
+                    android:id="@+id/nav_item_subuser"
+                    android:icon="@drawable/ptz_icon"
+                    android:title="Sub-Users" />&ndash;&gt;
+            </group>
+        </menu>
+    </item>-->
+</menu>

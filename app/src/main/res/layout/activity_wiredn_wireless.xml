@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.WiredWirelessActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar2" />
+
+    <TextView
+        android:id="@+id/wired_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="wireClick"
+        android:text="Wired"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/select_sensor_type_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/location_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="?attr/colorPrimaryDark"
+            android:hint="Location" />
+
+        <EditText
+            android:id="@+id/zone_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="?attr/colorPrimaryDark"
+            android:hint="Zone" />
+
+        <Spinner
+            android:id="@+id/port_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/type_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/wired_pair_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selection_btn_bg"
+            android:text="Pair"
+            android:onClick="pairClick"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:textAllCaps="false"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/wireless_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="wireClick"
+        android:textColor="?attr/colorPrimaryDark"
+        android:text="Wireless"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/select_sensor_type_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/location_et2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:textColorHint="?attr/colorPrimaryDark"/>
+
+        <EditText
+            android:id="@+id/zone_et2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="?attr/colorPrimaryDark"
+            android:hint="Zone" />
+
+        <Spinner
+            android:id="@+id/type_spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/wireless_pair_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selection_btn_bg"
+            android:text="Pair"
+            android:onClick="pairClick"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:textAllCaps="false"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+<!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="end"
+            android:id="@+id/wired_pair_btn"
+            android:paddingRight="30dp"
+            android:onClick="pairClick"
+            android:text="Pair"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp" />-->
+
+<!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="end"
+            android:id="@+id/wireless_pair_btn"
+            android:paddingRight="30dp"
+            android:text="Pair"
+            android:onClick="pairClick"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp" />-->

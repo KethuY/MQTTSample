@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_ll"
+        android:background="@drawable/rectangle_et_style_sharp"
+        android:padding="2dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_ll"
+                android:background="@drawable/scene_model_icon">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/rectangle_et_style_sharp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/scene_type_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="NIGHT"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/medium_text" />
+
+                        <TextView
+                            android:id="@+id/scene_edit_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="G"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_text"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:alpha="0.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/appliances_count_tv"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/cyan2"
+                            android:paddingLeft="4dp"
+                            android:text="6 Appliances"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/room_count_tv"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/cyan2"
+                            android:paddingLeft="4dp"
+                            android:text="1 Rooms"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/status_tv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginRight="15dp"
+                        android:visibility="gone"
+                        android:background="@drawable/oc_appliance_count_bg_green" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

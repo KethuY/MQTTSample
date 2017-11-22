@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditDeviceActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Rooms / Location"
+        android:layout_below="@+id/toolbar"
+        android:textSize="18sp"
+        android:layout_marginTop="2dp"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="?attr/colorPrimary"
+        android:gravity="center" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/device_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:layout_below="@+id/title"
+        android:scrollbars="horizontal" />
+</RelativeLayout>

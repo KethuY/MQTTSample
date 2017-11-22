@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        android:gravity="end"
+        android:visibility="invisible"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="20:15"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/quick_timer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="m"
+            android:textColor="@color/yellow" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tv_relay_ac"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="a"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/tv_temp_down"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+
+            android:gravity="center_horizontal|center_vertical"
+            android:text="m"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/tv_temp_display"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="18"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/tv_temp_up"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="H"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tv_low"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="LOW"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_med"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="MED"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_high"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="HIGH"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_redirect"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="T"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view_ac"
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#757575">
+        <!-- android:background="?attr/colorAccent"-->
+    </View>
+
+</LinearLayout>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".irblasters.IRBlasterProjector">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            android:text="PROJECTOR"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="3dp"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/power_pro_tv"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:text="r"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray_ir"
+                        android:textSize="27sp" />
+
+                    <TextView
+                        android:id="@+id/relay_pro_tv"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:text=")"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray"
+                        android:textSize="30sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical">
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@android:color/background_dark"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/background_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start">
+
+                    <TextView
+                        android:id="@+id/home_pro_tv"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:text="'"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray_ir"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/search_pro_tv"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:text="A"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray_ir"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="3dp"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start">
+
+                    <Button
+                        android:id="@+id/comp_pro_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/rectangle_et_style_ovel_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:padding="2dp"
+                        android:text="Comp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical">
+
+                    <Button
+                        android:id="@+id/video_pro_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rectangle_et_style_ovel_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:padding="2dp"
+                        android:text="Video"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/usb_pro_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rectangle_et_style_ovel_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:text="USB"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/lan_pro_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/rectangle_et_style_ovel_white"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onProClick"
+                        android:text="LAN"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingBottom="3dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <Button
+                android:id="@+id/user_pro_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/oc_appliance_count_bg_white"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:text="s"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/menu_pro_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/oc_appliance_count_bg_white"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:text="0"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignTop="@+id/up_pro_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ir_tv_menu"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/left_pro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/imageView"
+                android:layout_alignStart="@+id/imageView"
+                android:layout_below="@+id/menu_pro_btn"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:text="L"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/center_pro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/left_pro_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:text="OK"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/right_pro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_alignTop="@+id/center_pro_tv"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:paddingBottom="10dp"
+                android:text="X"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/up_pro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:paddingTop="10dp"
+                android:text="g"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/down_pro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/up_pro_tv"
+                android:layout_alignStart="@+id/up_pro_tv"
+                android:layout_marginTop="130dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:text="h"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/esc_pro_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/oc_appliance_count_bg_white"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:text="Esc"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/mouse_pro_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/oc_appliance_count_bg_white"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="onProClick"
+                android:text="1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <!-- <View
+             android:layout_width="match_parent"
+             android:layout_height="0.1dp"
+             android:background="@android:color/white" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/page_plus_pro_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/oc_appliance_count_bg_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onProClick"
+                    android:text="H"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Page"
+                    android:textColor="@color/white"
+
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/page_minus_pro_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/oc_appliance_count_bg_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onProClick"
+                    android:text="m"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/zoom_plus_pro_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/oc_appliance_count_bg_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onProClick"
+                    android:text="H"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zoom"
+                    android:textColor="@color/white"
+
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/zoom_minus_pro_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/oc_appliance_count_bg_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onProClick"
+                    android:text="m"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/vol_plus_pro_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/oc_appliance_count_bg_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onProClick"
+                    android:text="H"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volume"
+                    android:textColor="@color/white"
+
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/vol_minus_pro_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/oc_appliance_count_bg_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onProClick"
+                    android:text="m"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/mute__pro_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white"
+                android:gravity="center"
+                android:onClick="onProClick"
+                android:text="A/V Mute"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/split_pro_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white"
+                android:gravity="center"
+                android:onClick="onProClick"
+                android:text="Split"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/freeze_pro_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_et_style_ovel_white"
+                android:gravity="center"
+                android:onClick="onProClick"
+                android:text="Freeze"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/tvLearn"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/ir_learn_btn_rectangle"
+                android:gravity="center"
+                android:onClick="onProClick"
+                android:text="Learn"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvImportSync"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/ir_learn_btn_rectangle"
+                android:gravity="center"
+                android:onClick="onProClick"
+                android:text="Import"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

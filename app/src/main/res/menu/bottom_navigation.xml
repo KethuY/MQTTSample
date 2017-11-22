@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_appliance"
+        android:checked="true"
+        android:icon="@drawable/lighting_home"
+        android:title="@string/title_appliance"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/navigation_safety"
+        android:icon="@drawable/safety_home"
+        android:title="@string/title_safety"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/navigation_surveillance"
+        android:icon="@drawable/scene_home"
+        android:title="@string/title_scenes"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/navigation_timer"
+        android:icon="@drawable/timer_home"
+        android:title="@string/title_timer"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/settings_home"
+        android:title="@string/title_settings"
+        app:showAsAction="withText" />
+
+</menu>

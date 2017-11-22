@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atg.onecontrolv3">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Permissions required to receive BOOT_COMPLETED event -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".application.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/oc_app_logo_blue"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/oc_app_logo_blue"
+        android:supportsRtl="true"
+        android:theme="@style/ThemeTwo">
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.OTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.LandingPageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.RelayButtonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ThemeSelectionActivity"
+            android:screenOrientation="portrait" />
+        <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+        <activity
+            android:name=".irblasters.IRBlasterTVNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".irblasters.IRBlasterAcNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".irblasters.IRBlasterACLearnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".irblasters.IRBlasterDVDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".irblasters.IRBlasterHomeTheaterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".irblasters.IRBlasterProjector"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditTimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TimerApplianceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TimerRepeatModeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.GridImageViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PhoneNosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ConnectedSensorsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WiredWirelessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PIRApplianceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PIRDashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditPIRActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AddDeviceActivityMqtt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EnergyMgmtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AddSubUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SubuserRoomsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WifiConfigActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.IRBlasterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SceneEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SceneTimerApplianceActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

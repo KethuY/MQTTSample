@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_irblaster"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.IRBlasterActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnLearning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Learning" />
+
+        <Button
+            android:id="@+id/btnControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Control" />
+
+        <TextView
+            android:id="@+id/tvResponse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="response" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/titleLogo"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo_reg_trademark"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/tvConfigure">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="?attr/colorPrimary"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etSSID"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:drawableLeft="@drawable/oc_login_user"
+                        android:gravity="center_vertical"
+                        android:hint="Wi-Fi SSID"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/edittext_color"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnRouterSearch"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:background="@android:drawable/ic_menu_search" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnPwdView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:drawable/ic_menu_view" />
+
+                    <EditText
+                        android:id="@+id/etPwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:drawableLeft="@drawable/oc_login_pwd"
+                        android:gravity="center_vertical"
+                        android:hint="Password"
+                        android:inputType="textPassword|textCapSentences"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/edittext_color"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/etUUID"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/oc_login_pwd"
+                    android:gravity="center_vertical"
+                    android:hint="UUID"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/edittext_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Note : Switch OFF the mobile data before you select Zmote IR"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnWifiSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/oc_login_btn_bg"
+                        android:hint="Choose Zmote"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/btnPairing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/oc_login_btn_bg"
+                            android:hint="Pair"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/tvConfigure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLogo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Follow the steps to pair your Zmote with your home Wi-Fi network\n"
+        android:textColor="@color/cyan2"
+        android:textSize="15sp" />
+
+</RelativeLayout>

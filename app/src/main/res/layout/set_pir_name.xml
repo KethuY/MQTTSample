@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <TextView
+        android:id="@+id/titletv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Enter Serial Number"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/pir_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/titletv"
+        android:layout_marginTop="29dp"
+        android:inputType="number"
+        android:maxLength="5"
+        android:background="@drawable/edittext_background"
+        android:hint="5-Digits Serial No" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pir_name"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selection_btn_bg"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selection_btn_bg"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

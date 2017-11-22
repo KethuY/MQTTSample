@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="2dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
+        android:text="SETTINGS"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+    <!--android:alpha="0.8"
+        android:background="@color/bg_color2"-->
+
+    <!--<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvTitle"
+        android:scrollbars="none" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.ramprasad.onecontrol.Utils.ExpandablePanel
+            android:id="@+id/foo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:animationDuration="500"
+            app:collapsedHeight="100dip"
+            app:content="@+id/value"
+            app:handle="@+id/expand" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" put some long text to test" />
+
+                <Button
+                    android:id="@+id/expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/value"
+                    android:text="More" />
+            </RelativeLayout>
+        </com.ramprasad.onecontrol.Utils.ExpandablePanel>
+    </LinearLayout>
+    </ScrollView>-->
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:alpha="0.8"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="Lighting &amp; Appliances"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <Button
+                    android:id="@+id/btnAddDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="#00000000"
+                    android:capitalize="none"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Pair Device"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvAddDevice"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="h"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <Button
+                    android:id="@+id/btnDeviceAdded"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="#00000000"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Paired Devices"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvDevicesAdded"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="n"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color1"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnFavourites"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/setting_buttons_bg"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Favourites"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvFavourites"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="F"
+                    android:textColor="@color/cyan2"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <Button
+                    android:id="@+id/btnMotionLighting"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="#00000000"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Motion Lighting"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvMultipair"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="l"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color1"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnRemove"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/setting_buttons_bg"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Remove"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvRemove"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="n"
+                    android:textColor="@color/cyan2"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="Safety"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <Button
+                    android:id="@+id/btnConnectSensor"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="#00000000"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Connect Sensor"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvConnectSensor"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="m"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <Button
+                    android:id="@+id/btnSMSAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="#00000000"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="SMS/CALL Alert"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvSMSAlert"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="n"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <Button
+                    android:id="@+id/btnActiveDeactive"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="#00000000"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Connected Sensors"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvActiveDeactive"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="h"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="Security &amp; Surveillance"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <Button
+                        android:id="@+id/btnCamera"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:alpha="0.8"
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Camera"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvCamera"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="h"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:background="@android:color/transparent">
+
+                    <Button
+                        android:id="@+id/btnVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Video"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvVideo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="v"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutOffline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</RelativeLayout>
+

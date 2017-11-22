@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/oc_header_logo_black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/cyan2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:text="Congratulations!"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:paddingRight="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="15dp"
+        android:text="Welcome to OneControl Application."
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:paddingEnd="5dp"
+        android:text="You have successfully registered the Gateway."
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:paddingEnd="5dp"
+        android:text="Go to settings to add receivers and configure appliance and many more."
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:paddingEnd="5dp"
+        android:text="Thank you for choosing OneControl."
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="start"
+        android:paddingLeft="15dp"
+        android:text="Team OneControl"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="Close"
+        android:id="@+id/close_dialog_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black" />
+
+</LinearLayout>

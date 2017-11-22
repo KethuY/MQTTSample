@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.SplashActivity"><!--@drawable/selection_layout_bg-->
+
+    <!--<com.atg.onecontrol.Utils.PlayGifView
+        android:id="@+id/playGIF"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>-->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo_reg_trademark"
+        android:contentDescription="@null" />
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>-->
+
+    <style name="button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/button_background</item>
+    </style>
+
+    <style name="ThemeOne" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/themeOnePrimary</item>
+        <item name="colorPrimaryDark">@color/themeOnePrimaryDark</item>
+        <item name="colorAccent">@color/themeOneAccent</item>
+        <item name="colorButtonNormal">@color/themeOneButtonText</item>
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggleOne</item>
+        <item name="android:textColorSecondary">@color/themeOneButtonText</item>
+        <item name="android:windowBackground">@drawable/theme_one_ldpi</item>
+    </style>
+
+
+    <style name="ThemeTwo" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/themeTwoPrimary</item>
+        <item name="colorPrimaryDark">@color/themeTwoPrimaryDark</item>
+        <item name="colorAccent">@color/themeTwoAccent</item>
+        <item name="colorButtonNormal">@color/themeTwoButtonText</item>
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggleTwo</item>
+        <item name="android:actionMenuTextColor">@color/themeTwoButtonText</item>
+        <item name="android:windowBackground">@drawable/theme_two_ldpi</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+    </style>
+
+    <style name="ThemeThree" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/themeThreePrimary</item>
+        <item name="colorPrimaryDark">@color/themeThreePrimaryDark</item>
+        <item name="colorAccent">@color/themeThreeAccent</item>
+        <item name="colorButtonNormal">@color/themeThreeButtonText</item>
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggleThree</item>
+        <item name="android:textColorSecondary">@color/themeThreeButtonText</item>
+        <item name="android:windowBackground">@drawable/theme_three_ldpi</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="ThemeFour" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/themeFourPrimary</item>
+        <item name="colorPrimaryDark">@color/themeFourPrimaryDark</item>
+        <item name="colorAccent">@color/themeFourAccent</item>
+        <item name="colorButtonNormal">@color/themeFourButtonText</item>
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggleFour</item>
+        <item name="android:textColorSecondary">@color/themeFourButtonText</item>
+        <item name="android:windowBackground">@drawable/theme_four_ldpi</item>
+    </style>
+
+    <!--Navigation Icon style-->
+    <style name="MyDrawerArrowToggleOne" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/themeOneButtonText</item>
+    </style>
+
+    <style name="MyDrawerArrowToggleTwo" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/themeTwoButtonText</item>
+    </style>
+
+    <style name="MyDrawerArrowToggleThree" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/themeThreeButtonText</item>
+    </style>
+
+    <style name="MyDrawerArrowToggleFour" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/themeFourButtonText</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ThemeOne.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemeOne.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ThemeOne.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--  Transparent dialog -->
+    <style name="TransparentProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/green</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/red
+        </item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/red
+        </item>
+    </style>
+
+</resources>
+

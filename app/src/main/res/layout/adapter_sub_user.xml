@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp">
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/cyan2"/>
+            <TextView
+                android:id="@+id/tvSubUserName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="User Name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvSubUserDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="r"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/red"
+                android:clickable="true"
+                android:textSize="25sp"
+                android:src="@android:drawable/ic_delete"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

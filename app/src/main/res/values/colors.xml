@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#BDBDBD</color>
+    <color name="transprant">#00000000</color>
+
+    <!--Room label Color-->
+    <color name="colorRumLblOne">#475064</color>
+    <color name="colorRumLblTwo">#333F6F</color>
+    <color name="colorRumLblThree">#C84750</color>
+    <color name="colorRumLblFour">#3C5064</color>
+
+    <!--Theme One Colors-->
+    <color name="themeOnePrimary">#CC4758</color>
+    <color name="themeOnePrimaryDark">#CC4758</color>
+    <color name="themeOneAccent">#CC4758</color>
+    <color name="themeOneButtonText">#FFFFFF</color>
+
+    <!--Theme Two Colors-->
+    <color name="themeTwoPrimary">#333F6F</color>
+    <color name="themeTwoPrimaryDark">#FFFFFF</color>
+    <color name="themeTwoAccent">#333F6F</color>
+    <color name="themeTwoButtonText">#333F6F</color>
+
+    <!--Theme Three Colors-->
+    <color name="themeThreePrimary">#CC4758</color>
+    <color name="themeThreePrimaryDark">#FFFFFF</color>
+    <color name="themeThreeAccent">#CC4758</color>
+    <color name="themeThreeButtonText">#CC4758</color>
+
+    <!--Theme Four Colors-->
+    <color name="themeFourPrimary">#EF9636</color>
+    <color name="themeFourPrimaryDark">#EF9636</color>
+    <color name="themeFourAccent">#EF9636</color>
+    <color name="themeFourButtonText">#FFFFFF</color>
+
+
+    <!--Colors for IR Screens-->
+    <color name="black">#000</color>
+    <color name="orange">#FF3D00</color>
+    <color name="white">#FFF</color>
+
+    <color name="cyan1">#5583cc</color><!--#008ca1-->
+    <color name="light_cyan">#022256</color><!--#2da0ba-->
+    <!--<color name="gray">#d0d0d0</color>-->
+    <color name="gray">#BDBDBD</color><!--Added by bharath-->
+    <color name="gray_ir">#83878c</color>
+    <color name="gray_thick">#808080</color>
+    <color name="green">#4f9e5c</color>
+    <color name="green_thick">#65FA04</color>
+    <color name="blue">#0000ff</color>
+    <color name="red">#ff0000</color>
+    <color name="dark_gray">#2d2524</color>
+
+    <color name="test">#d20e35</color>
+    <color name="toolbar_color">#6c9ae4</color>
+    <color name="cyan2">#0972AF</color>
+    <color name="yellow">#FFFF00</color>
+
+    <color name="bg_white">#FFFFFE</color>
+    <color name="bg_color1">#E9EBED</color>
+    <color name="bg_color2">#e5eef7</color>
+
+    <!--<color name="colorPrimaryDark">#022256</color>--><!--#2da0ba-->
+    <color name="cyan">#1c232b</color>
+    <color name="bg_color">@color/bg_color1</color><!--#000000-->
+    <color name="main_text_color">#0972AF</color>
+
+    <color name="subusercolor">#FF2791CF</color>
+    <color name="superusercolor">#7cc9f5</color>
+
+    <!--<color name="edittext_color">#919191</color>
+    Below line added by Bharath-->
+    <color name="edittext_color">#d3d3d3</color>
+
+
+    <!--MP Chart colors-->
+
+    <color name="mp_bright_pink">#FF0000</color>
+    <color name="mp_red">#0000FF</color>
+    <color name="mp_orange">#FF33CC</color>
+    <color name="mp_yellow">#339966</color>
+    <color name="mp_chartreuse">#FF9900</color>
+    <color name="mp_green">#990099</color>
+    <color name="mp_spring_green">#CCCC00</color>
+    <color name="mp_cyan">#0099CC</color>
+    <color name="mp_azure">#FFFF66</color>
+    <color name="mp_blue">#996600</color>
+    <color name="mp_violet">#6600CC</color>
+    <color name="mp_magenta">#00CC99</color>
+    <color name="mp_lt_org">#FFCC00</color>
+    <color name="mp_kun">#990000</color>
+    <color name="mp_ujl">#6666FF</color>
+    <color name="mp_lt_pin">#FF99FF</color>
+    <color name="mp_pin">#CCFF99</color>
+    <color name="mp_gra">#666633</color>
+    <color name="mp_vio">#003366 </color>
+    <color name="mp_org">#FF9933</color>
+
+    <array name="rainbow">
+        <item>@color/mp_bright_pink</item>
+        <item>@color/mp_red</item>
+        <item>@color/mp_orange</item>
+        <item>@color/mp_yellow</item>
+        <item>@color/mp_chartreuse</item>
+        <item>@color/mp_green</item>
+        <item>@color/mp_spring_green</item>
+        <item>@color/mp_cyan</item>
+        <item>@color/mp_azure</item>
+        <item>@color/mp_blue</item>
+        <item>@color/mp_violet</item>
+        <item>@color/mp_magenta</item>
+    </array>
+
+</resources>

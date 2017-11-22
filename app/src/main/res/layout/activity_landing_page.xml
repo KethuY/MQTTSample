@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".activities.LandingPageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:contentDescription="@null"
+            android:src="@drawable/logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:maxLines="2"
+            android:text="Hello User"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:maxLines="2"
+            android:paddingTop="5dp"
+            android:text="Welcome to OneControl"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/appln_tv"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/progress_appliance_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="launchClick"
+                    android:text="w"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/sfty_tv"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/progress_appliance_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="launchClick"
+                    android:text="z"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+
+                <TextView
+                    android:id="@+id/serlinc_tv"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/progress_appliance_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="launchClick"
+                    android:text="A"
+                    android:textColor="@android:color/white"
+                    android:textSize="40dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/title_appliance"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/title_safety"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/title_survey"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/timer_tv"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/progress_appliance_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="S"
+                    android:onClick="launchClick"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/secen_tv"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/progress_appliance_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="!"
+                    android:onClick="launchClick"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+
+                <TextView
+                    android:id="@+id/gatewa_tv"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/progress_appliance_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="8"
+                    android:onClick="launchClick"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/title_timer"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="scenes"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="gateways"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:paddingTop="15dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="@color/cyan2"
+            android:id="@+id/register_tv"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="register gateway"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="0.5"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:buttonTint="@color/white"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/white"
+            android:id="@+id/show_in_startup_cb"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="start"
+            android:text="Show in start-up"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

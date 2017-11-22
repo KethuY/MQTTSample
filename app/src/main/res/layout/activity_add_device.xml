@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddDeviceActivityMqtt">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvTitleRoom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="2dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:text="Pairing"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:mockup_opacity="2dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvTitleRoom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/pairLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvEnterSRNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Enter Serial Number"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etPairDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center"
+                    android:hint="5-Digit Serial No"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+
+                <Button
+                    android:id="@+id/btnOkPair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selection_btn_bg"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pairLayoutResubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvEnterSRNoResubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Re Enter Serial Number"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etPairDeviceResubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center"
+                    android:hint="Re enter 5-Digit Serial No"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+
+                <Button
+                    android:id="@+id/btnOkPairReSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selection_btn_bg"
+                    android:text="Re-Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/applianceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pairLayout"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+                    <!--android:background="@color/bg_color1"-->
+                    <Button
+                        android:id="@+id/btnAssignName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="35dp"
+                        android:background="#00000000"
+                        android:drawableRight="@drawable/arrow_down"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Edit Name"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/colorPrimaryDark" />
+
+                    <!--android:background="@drawable/setting_buttons_bg"-->
+
+                    <TextView
+                        android:id="@+id/tvAssignName"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:text="J"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/nameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transprant"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/etAssignName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:maxLength="14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selection_btn_bg"
+                            android:text="Save"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/btnClear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selection_btn_bg"
+                            android:text="Clear"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+
+                    <Button
+                        android:id="@+id/btnAppliances"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="35dp"
+                        android:background="@drawable/setting_buttons_bg"
+                        android:drawableRight="@drawable/arrow_down"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Appliances"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/tvAppliances"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:text="P"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/llControls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transprant"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/sprTypes"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp" />
+
+                    <Spinner
+                        android:id="@+id/sprSymbols"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp" />
+
+                    <Spinner
+                        android:id="@+id/sprDimming"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/etWattage"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Enter Wattage"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnControlsSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selection_btn_bg"
+                            android:text="Save"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/btnControlsClear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selection_btn_bg"
+                            android:text="Clear"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+
+                    <Button
+                        android:id="@+id/btnMultipair"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="35dp"
+                        android:background="@drawable/setting_buttons_bg"
+                        android:drawableRight="@drawable/arrow_down"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Multipair"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/tvMultipair"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:text="Q"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/llMultipair"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transprant"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="1"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btn2"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="2"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn3"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="3"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btn4"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="4"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn5"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="5"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btn6"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="6"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout8Relay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn7"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="7"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btn8"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_device_btns_shape"
+                            android:text="8"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnMultiPairSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selection_btn_bg"
+                        android:text="Apply"
+                        android:textColor="@color/white" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvFonts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="25sp" />
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_color1"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btnWattage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="35dp"
+                        android:background="@drawable/setting_buttons_bg"
+                        android:drawableRight="@drawable/arrow_down"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Wattage"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvWattage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@color/bg_color1"
+                        android:gravity="center"
+                        android:text="i"
+                        android:textColor="@color/cyan2"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/wattageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#a3b6c1"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnWattageSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selection_btn_bg"
+                            android:text="Save"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/btnWattageClear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selection_btn_bg"
+                            android:text="Clear"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oc_login_layout_bg"
+        android:paddingBottom="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/etSubUserMobNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/etSubUserIMEI"
+                android:hint="Name"
+                android:drawableLeft="@drawable/oc_login_user"
+                android:inputType="text|textCapSentences"
+                android:paddingLeft="5dp"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/white"
+                android:textColorHint="@color/edittext_color"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <EditText
+                android:id="@+id/etSubUserIMEI"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/oc_login_pwd"
+                android:hint="IMEI"
+                android:imeOptions="actionDone"
+                android:maxLength="15"
+                android:paddingLeft="5dp"
+                android:inputType="textCapSentences|number"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textColorHint="@color/edittext_color"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <Switch
+                android:id="@+id/btnToggle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub user"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:layout_below="@+id/divider3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvRoomTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="50dp"
+                    android:text="Super User"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+
+                <ToggleButton
+                    android:id="@+id/btnToggle"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_marginRight="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_button_background"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAddSubUser"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oc_login_btn_bg"
+                    android:hint="Add"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
